@@ -2,8 +2,7 @@ title: ExcelFix24
 url: "https://www.excelfix24.com"
 baseurl: ""
 remote_theme: jitinnair1/gradfolio
-plugins:
-  - jekyll-remote-theme
+
 
 collections:
   pages:
