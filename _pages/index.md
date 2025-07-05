@@ -33,17 +33,17 @@ title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
     <h2>Simple pricing</h2>
     <div class="tiers">
       <div class="tier">
-        <h3>Quick</h3><p class="quote">Request a quote</p>
+        <h3>Quick</h3><p class="price">€99</p>
         <p>≤ 1 sheet,<br>2 routines</p>
         <a class="btn" href="https://buy.stripe.com/dRm00j8Jt1MtceC4UP0Ny01">Pay link</a>
       </div>
       <div class="tier">
-        <h3>Standard</h3><p class="quote">Request a quote</p>
+        <h3>Standard</h3><p class="price">€149</p>
         <p>≤ 3 sheets,<br>up to 5 routines</p>
         <a class="btn" href="https://buy.stripe.com/7sY4gz0cXdvb0vUaf90Ny02">Pay link</a>
       </div>
       <div class="tier">
-        <h3>Complex<br><span class="small">weekly</span></h3><p class="quote">Request a quote</p>
+        <h3>Complex<br><span class="small">weekly</span></h3><p class="price">€259</p>
         <p>Multi-sheet automations, API calls, Power Query.</p>
         <a class="btn" href="https://buy.stripe.com/14A28rcZJ9eVbay8710Ny00">Subscribe</a>
       </div>
@@ -93,11 +93,11 @@ title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
         }
       }
 
-      const rates = { USD: 0.66, GBP: 0.52, EUR: 0.61, CAD: 0.89 };
+        const rates = { USD: 1.07, GBP: 0.85, AUD: 1.64, CAD: 1.45 };
 
       async function loadRates() {
         try {
-          const res = await fetch('https://open.er-api.com/v6/latest/AUD');
+          const res = await fetch('https://open.er-api.com/v6/latest/EUR');
           if (res.ok) {
             const data = await res.json();
             if (data && data.rates) {
@@ -109,9 +109,9 @@ title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
         }
       }
 
-      function formatPrice(aud) {
-        const rate = rates[currency];
-        const value = rate ? aud * rate : null;
+        function formatPrice(eur) {
+          const rate = rates[currency];
+          const value = rate ? eur * rate : null;
         if (value !== null) {
           try {
             return new Intl.NumberFormat(locale, {
@@ -129,14 +129,14 @@ title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
         await loadRates();
         document.querySelectorAll('.price').forEach(el => {
           const text = el.textContent;
-          const match = text.replace(/,/g, '').match(/\$([0-9.]+)/);
+          const match = text.replace(/,/g, '').match(/(?:\$|€)([0-9.]+)/);
           if (match) {
-            const aud = parseFloat(match[1]);
-            const converted = formatPrice(aud);
+            const baseValue = parseFloat(match[1]);
+            const converted = formatPrice(baseValue);
             if (converted) {
               el.textContent = converted;
             } else if (currency) {
-              el.textContent = `$${aud} AUD`;
+              el.textContent = `€${baseValue} EUR`;
             } else {
               el.style.display = 'none';
             }
