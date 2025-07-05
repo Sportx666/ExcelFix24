@@ -64,6 +64,7 @@ h3{
   box-shadow:0 4px 12px rgba(0,0,0,0.1);border:1px solid #eee;
 }
 .price{font-size:2rem;margin:4px 0 12px;color:var(--green);}
+.quote{font-size:1.2rem;margin:4px 0 12px;color:var(--green);}
 .small{font-size:.8rem;font-weight:400;}
 .testimonials blockquote{
   background:#fff;padding:20px;border-left:4px solid var(--green);
