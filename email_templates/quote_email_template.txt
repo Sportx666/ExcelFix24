@@ -1,0 +1,9 @@
+Subject: Your ExcelFix24 quote
+
+Hi there,
+
+Your ticket ID is {{ticket_id}}. The recommended tier is **{{tier}}**.
+To proceed, please pay via this link: {{payment_link}}
+
+Best regards,
+ExcelFix24 Team

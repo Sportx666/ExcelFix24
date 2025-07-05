@@ -1,0 +1,8 @@
+Subject: Files for EF24-1234 – bug-fix until {{due_date}}
+
+Hi,
+
+Here are your updated files. You have a 7-day bug-fix window until {{due_date}}.
+
+Regards,
+ExcelFix24 Team

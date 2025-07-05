@@ -6,10 +6,11 @@ title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
 
   <!-- Hero -->
   <header class="section hero">
+<img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="ExcelFix24 logo" width="120">
     <h1>Fix dirty spreadsheets&nbsp;in&nbsp;24&nbsp;h.</h1>
     <p class="sub">Upload your file → pay → get a custom macro and Loom walkthrough tomorrow.</p>
     <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScXrZ8CXKn3zIAzqjyL3mc3_PKXks1M_hvgyaQtHF3L04s9sw/viewform?usp=header" target="_blank">Get your quote</a>
@@ -146,3 +147,4 @@ title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
       updatePrices();
     })();
   </script>
+{% include analytics.html %}
