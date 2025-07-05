@@ -2,6 +2,9 @@
 
 This site is built with [Hugo](https://gohugo.io/) using a small custom theme located in `themes/excelfix`.
 
+## Building
+Only Hugo is required to build or test the site locally. Use `hugo server` to run a local development server or `hugo --minify` to generate the `public` output directory.
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
