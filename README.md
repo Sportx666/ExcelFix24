@@ -7,3 +7,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Deployment
 The site is built and deployed automatically using [GitHub Actions](.github/workflows/hugo-gh-pages.yml). The generated content in `public` is published to the `gh-pages` branch. Configure the repository's GitHub Pages settings to serve the site from this branch.
+
+## Styling
+All site styles are compiled into `static/assets/css/custom.css`. Previous SCSS
+sources have been removed because the build does not use Hugo Pipes. Edit the
+`custom.css` file directly if you need to adjust the design.
