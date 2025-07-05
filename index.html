@@ -1,4 +1,69 @@
-<link rel="stylesheet" href="/assets/css/custom.css" />
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <h1 class="post-headline">ExcelFix24</h1>
+        <h3 class="post-description"></h3>
+
+        <div class="links scroll">
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/blog/">Blog</a>
+        <a href="/archive/">Archive</a>
+</div>
+
+
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ExcelFix 24 – Rapid Spreadsheet Rescue | ExcelFix24</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="ExcelFix 24 – Rapid Spreadsheet Rescue" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://www.excelfix24.com/" />
+<meta property="og:url" content="https://www.excelfix24.com/" />
+<meta property="og:site_name" content="ExcelFix24" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-05T16:42:21+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ExcelFix 24 – Rapid Spreadsheet Rescue" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","dateModified":"2025-07-05T16:42:21+00:00","datePublished":"2025-07-05T16:42:21+00:00","headline":"ExcelFix 24 – Rapid Spreadsheet Rescue","name":"ExcelFix24","url":"https://www.excelfix24.com/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+        <!-- insert favicons, used https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+
+        <!-- MathJax -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+     processEscapes: true
+    }
+  });
+</script>
+
+
+        <!-- Load fontawesome here for faster loadtimes: https://stackoverflow.com/a/35880730/9523246 -->
+        <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v6.7.2/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+
+    </head>
+
+    <body>
+        <main>
+            <article>
+                <link rel="stylesheet" href="/assets/css/custom.css" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -8,7 +73,6 @@
 
 <p><!-- Hero --></p>
 <header class="section hero">
-<img src="/assets/img/logo.svg" alt="ExcelFix24 logo" width="120" />
     <h1>Fix dirty spreadsheets&nbsp;in&nbsp;24&nbsp;h.</h1>
     <p class="sub">Upload your file → pay → get a custom macro and Loom walkthrough tomorrow.</p>
     <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScXrZ8CXKn3zIAzqjyL3mc3_PKXks1M_hvgyaQtHF3L04s9sw/viewform?usp=header" target="_blank">Get your quote</a>
@@ -32,17 +96,17 @@
     <h2>Simple pricing</h2>
     <div class="tiers">
       <div class="tier">
-        <h3>Quick</h3><p class="quote">Request a quote</p>
+        <h3>Quick</h3><p class="price">€99</p>
         <p>≤ 1 sheet,<br />2 routines</p>
         <a class="btn" href="https://buy.stripe.com/dRm00j8Jt1MtceC4UP0Ny01">Pay link</a>
       </div>
       <div class="tier">
-        <h3>Standard</h3><p class="quote">Request a quote</p>
+        <h3>Standard</h3><p class="price">€149</p>
         <p>≤ 3 sheets,<br />up to 5 routines</p>
         <a class="btn" href="https://buy.stripe.com/7sY4gz0cXdvb0vUaf90Ny02">Pay link</a>
       </div>
       <div class="tier">
-        <h3>Complex<br /><span class="small">weekly</span></h3><p class="quote">Request a quote</p>
+        <h3>Complex<br /><span class="small">weekly</span></h3><p class="price">€259</p>
         <p>Multi-sheet automations, API calls, Power Query.</p>
         <a class="btn" href="https://buy.stripe.com/14A28rcZJ9eVbay8710Ny00">Subscribe</a>
       </div>
@@ -92,11 +156,11 @@
         }
       }
 
-      const rates = { USD: 0.66, GBP: 0.52, EUR: 0.61, CAD: 0.89 };
+        const rates = { USD: 1.07, GBP: 0.85, AUD: 1.64, CAD: 1.45 };
 
       async function loadRates() {
         try {
-          const res = await fetch('https://open.er-api.com/v6/latest/AUD');
+          const res = await fetch('https://open.er-api.com/v6/latest/EUR');
           if (res.ok) {
             const data = await res.json();
             if (data && data.rates) {
@@ -108,9 +172,9 @@
         }
       }
 
-      function formatPrice(aud) {
-        const rate = rates[currency];
-        const value = rate ? aud * rate : null;
+        function formatPrice(eur) {
+          const rate = rates[currency];
+          const value = rate ? eur * rate : null;
         if (value !== null) {
           try {
             return new Intl.NumberFormat(locale, {
@@ -128,14 +192,14 @@
         await loadRates();
         document.querySelectorAll('.price').forEach(el => {
           const text = el.textContent;
-          const match = text.replace(/,/g, '').match(/\$([0-9.]+)/);
+          const match = text.replace(/,/g, '').match(/(?:\$|€)([0-9.]+)/);
           if (match) {
-            const aud = parseFloat(match[1]);
-            const converted = formatPrice(aud);
+            const baseValue = parseFloat(match[1]);
+            const converted = formatPrice(baseValue);
             if (converted) {
               el.textContent = converted;
             } else if (currency) {
-              el.textContent = `$${aud} AUD`;
+              el.textContent = `€${baseValue} EUR`;
             } else {
               el.style.display = 'none';
             }
@@ -148,3 +212,27 @@
 
 <script defer="" data-domain="excelfix24.com" src="https://plausible.io/js/plausible.js"></script>
 
+
+            </article>
+        </main>
+
+        <footer>
+          <p class="copy">
+            <small> &copy; ExcelFix24 2025
+                    | Powered by Jekyll and
+                    <a target="_blank" href="https://github.com/jitinnair1/gradfolio/">Gradfolio</a>.
+                    Last updated on 05 July 2025
+            </small>
+          </p>
+
+        <div class="rounded-social-buttons"></div>
+
+
+        </footer>
+
+        <script defer data-domain="excelfix24.com" src="https://plausible.io/js/plausible.js"></script>
+
+
+    </body>
+
+</html>
