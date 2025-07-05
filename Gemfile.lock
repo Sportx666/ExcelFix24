@@ -78,19 +78,12 @@ GEM
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
-    jekyll-sass-converter (3.0.0)
-      sass-embedded (~> 1.54)
+    jekyll-sass-converter (3.1.0)
+      sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-theme-chirpy (7.3.0)
-      jekyll (~> 4.3)
-      jekyll-archives (~> 2.2)
-      jekyll-include-cache (~> 0.2)
-      jekyll-paginate (~> 1.1)
-      jekyll-seo-tag (~> 2.8)
-      jekyll-sitemap (~> 1.4)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.12.2)
@@ -177,7 +170,6 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-theme-chirpy
 
 BUNDLED WITH
    2.6.7
