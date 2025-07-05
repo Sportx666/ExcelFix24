@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /
 title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
 ---
@@ -10,7 +10,6 @@ title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
 
   <!-- Hero -->
   <header class="section hero">
-<img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="ExcelFix24 logo" width="120">
     <h1>Fix dirty spreadsheets&nbsp;in&nbsp;24&nbsp;h.</h1>
     <p class="sub">Upload your file → pay → get a custom macro and Loom walkthrough tomorrow.</p>
     <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScXrZ8CXKn3zIAzqjyL3mc3_PKXks1M_hvgyaQtHF3L04s9sw/viewform?usp=header" target="_blank">Get your quote</a>

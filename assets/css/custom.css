@@ -39,10 +39,11 @@ h3{
 }
 .sub{max-width:640px;margin:0 auto 28px;color:#444;}
 .hero{
-  background:linear-gradient(135deg,var(--green),var(--charcoal));
+  background:url('../img/logo.svg') center/cover no-repeat;
   color:#fff;
   padding:80px 20px;
 }
+.hero h1,.hero h2{color:#fff;}
 .hero .sub{color:#eee;}
 .btn{
   display:inline-block;padding:12px 26px;border-radius:8px;
@@ -78,4 +79,4 @@ h3{
 @media(max-width:600px){
   .three,.pricing .tiers{flex-direction:column;}
 }
-@media (prefers-color-scheme: dark){body{background:#121212;color:#eee;} .hero{color:#fff;background:linear-gradient(135deg,var(--green),#000);} .three .card,.tier,.testimonials blockquote{background:#1e1e1e;border-color:#333;color:#eee;} }
+@media (prefers-color-scheme: dark){body{background:#121212;color:#eee;} .hero{color:#fff;background:url('../img/logo.svg') center/cover no-repeat;} .three .card,.tier,.testimonials blockquote{background:#1e1e1e;border-color:#333;color:#eee;} }
