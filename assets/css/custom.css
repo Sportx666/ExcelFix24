@@ -78,3 +78,4 @@ h3{
 @media(max-width:600px){
   .three,.pricing .tiers{flex-direction:column;}
 }
+@media (prefers-color-scheme: dark){body{background:#121212;color:#eee;} .hero{color:#fff;background:linear-gradient(135deg,var(--green),#000);} .three .card,.tier,.testimonials blockquote{background:#1e1e1e;border-color:#333;color:#eee;} }
