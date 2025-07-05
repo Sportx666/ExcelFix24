@@ -25,6 +25,10 @@ h3{margin:8px 0;font-size:1.1rem;}
   background:#eee;color:var(--charcoal);text-decoration:none;font-weight:600;
 }
 .btn.primary{background:var(--green);color:#fff;}
+.btn:hover{
+  background:#ccc;       /* or a darker variant for .primary buttons */
+  transition:background 0.2s ease;
+}
 .three{display:flex;flex-wrap:wrap;gap:20px;}
 .three .card{
   flex:1 1 260px;background:#fff;padding:26px;border-radius:12px;
