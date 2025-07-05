@@ -5,6 +5,11 @@ remote_theme: jitinnair1/gradfolio
 plugins:
   - jekyll-remote-theme
 
+# Include Sass partials bundled with the remote theme.
+sass:
+  sass_dir: assets/css/_sass
+  style: compressed
+
 collections:
   pages:
     output: true
