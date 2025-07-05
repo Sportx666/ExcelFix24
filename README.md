@@ -1,6 +1,6 @@
 # ExcelFix24
 
-This site uses the Chirpy Jekyll theme.
+This site uses the Hacker Jekyll theme.
 The theme is loaded via the `remote_theme` setting in `_config.yml`.
 
 ## License
