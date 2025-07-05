@@ -1,12 +1,10 @@
 ---
-layout: default
-permalink: /
 title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
 ---
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<link rel="stylesheet" href="{{ "assets/css/custom.css" | relURL }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 
   <!-- Hero -->
   <header class="section hero">
@@ -146,4 +144,3 @@ title: "ExcelFix 24 – Rapid Spreadsheet Rescue"
       updatePrices();
     })();
   </script>
-{% include analytics.html %}

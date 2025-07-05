@@ -1,0 +1,4 @@
+baseURL = "https://www.excelfix24.com/"
+languageCode = "en-us"
+title = "ExcelFix24"
+theme = "excelfix"
