@@ -71,5 +71,82 @@
   <footer class="section footer">
     <p>ABN 12 345 678 901 • <a href="mailto:hello@excelfix24.com">hello@excelfix24.com</a> • <a href="https://www.linkedin.com/in/giuseppecarusi" target="_blank">LinkedIn</a></p>
   </footer>
+  <script>
+    (function () {
+      const locale = navigator.language || 'en-US';
+      const currencyMap = {
+        'en-US': 'USD',
+        'en-GB': 'GBP',
+        'en-AU': 'AUD',
+        'en-CA': 'CAD',
+        'fr-FR': 'EUR',
+        'de-DE': 'EUR',
+        'es-ES': 'EUR'
+      };
+
+      let currency = currencyMap[locale];
+      if (!currency) {
+        const base = locale.split('-')[0];
+        for (const key in currencyMap) {
+          if (key.startsWith(base)) {
+            currency = currencyMap[key];
+            break;
+          }
+        }
+      }
+
+      const rates = { USD: 0.66, GBP: 0.52, EUR: 0.61, CAD: 0.89 };
+
+      async function loadRates() {
+        try {
+          const res = await fetch('https://open.er-api.com/v6/latest/AUD');
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.rates) {
+              Object.assign(rates, data.rates);
+            }
+          }
+        } catch (e) {
+          console.warn('Currency fetch failed', e);
+        }
+      }
+
+      function formatPrice(aud) {
+        const rate = rates[currency];
+        const value = rate ? aud * rate : null;
+        if (value !== null) {
+          try {
+            return new Intl.NumberFormat(locale, {
+              style: 'currency',
+              currency
+            }).format(value);
+          } catch (e) {
+            return null;
+          }
+        }
+        return null;
+      }
+
+      async function updatePrices() {
+        await loadRates();
+        document.querySelectorAll('.price').forEach(el => {
+          const text = el.textContent;
+          const match = text.replace(/,/g, '').match(/\$([0-9.]+)/);
+          if (match) {
+            const aud = parseFloat(match[1]);
+            const converted = formatPrice(aud);
+            if (converted) {
+              el.textContent = converted;
+            } else if (currency) {
+              el.textContent = `$${aud} AUD`;
+            } else {
+              el.style.display = 'none';
+            }
+          }
+        });
+      }
+      updatePrices();
+    })();
+  </script>
 </body>
 </html>
