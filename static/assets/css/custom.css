@@ -43,7 +43,8 @@ h3{
   color:var(--accent);
   padding:80px 20px;
 }
-.hero h1,.hero h2{color:var(--accent);}
+.hero h1{color:var(--accent);text-shadow:0 2px 4px rgba(0,0,0,0.3);}
+.hero h2{color:var(--accent);}
 .hero .sub{color:var(--accent);}
 .btn{
   display:inline-block;padding:12px 26px;border-radius:8px;
