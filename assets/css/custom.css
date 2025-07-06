@@ -40,11 +40,11 @@ h3{
 .sub{max-width:640px;margin:0 auto 28px;color:#444;}
 .hero{
   background:url('../img/logo.svg') center/cover no-repeat;
-  color:#fff;
+  color:var(--accent);
   padding:80px 20px;
 }
-.hero h1,.hero h2{color:#fff;}
-.hero .sub{color:#eee;}
+.hero h1,.hero h2{color:var(--accent);}
+.hero .sub{color:var(--accent);}
 .btn{
   display:inline-block;padding:12px 26px;border-radius:8px;
   background:#eee;color:var(--charcoal);text-decoration:none;font-weight:600;
@@ -59,6 +59,8 @@ h3{
   flex:1 1 260px;background:#fff;padding:26px;border-radius:12px;
   box-shadow:0 4px 12px rgba(0,0,0,0.1);border:1px solid #eee;
 }
+.three h3{font-size:1.3rem;}
+.three p{font-size:1.05rem;}
 .pricing .tiers{display:flex;flex-wrap:wrap;gap:20px;}
 .tier{
   flex:1 1 280px;background:#fff;border-radius:12px;padding:26px;
@@ -79,4 +81,4 @@ h3{
 @media(max-width:600px){
   .three,.pricing .tiers{flex-direction:column;}
 }
-@media (prefers-color-scheme: dark){body{background:#121212;color:#eee;} .hero{color:#fff;background:url('../img/logo.svg') center/cover no-repeat;} .three .card,.tier,.testimonials blockquote{background:#1e1e1e;border-color:#333;color:#eee;} }
+@media (prefers-color-scheme: dark){body{background:#121212;color:#eee;} .hero{color:var(--accent);background:url('../img/logo.svg') center/cover no-repeat;} .three .card,.tier,.testimonials blockquote{background:#1e1e1e;border-color:#333;color:#eee;} }
