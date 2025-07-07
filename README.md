@@ -11,6 +11,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Deployment
 The site is built and deployed automatically using [GitHub Actions](.github/workflows/hugo-gh-pages.yml). The generated content in `public` is published to the `gh-pages` branch. Configure the repository's GitHub Pages settings to serve the site from this branch.
 
+> **Note**
+> 
+> - GitHub Pages must deploy from the `gh-pages` branch. Navigate to **Settings** → **Pages** in this repository and choose **Deploy from branch**, selecting `gh-pages` and `/` as the source.
+> - If you serve from the repository root, GitHub will display your `README.md` instead of the built site unless an empty `.nojekyll` file is present.
+
 ## Styling
 All site styles are compiled into `static/assets/css/custom.css`. Previous SCSS
 sources have been removed because the build does not use Hugo Pipes. Edit the
